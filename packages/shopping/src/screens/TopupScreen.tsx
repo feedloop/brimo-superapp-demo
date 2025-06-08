@@ -3,14 +3,14 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import Placeholder from '../components/Placeholder';
 
 // @ts-ignore
-const Topup = React.lazy(() => import('topup/App'));
+const TopUp = React.lazy(() => import('topup/App'));
 
 const TopupScreen = () => {
   return (
     <ErrorBoundary name="TopupScreen">
       <React.Suspense
-        fallback={<Placeholder label="Topup" icon="plus-circle" />}>
-        <Topup />
+        fallback={<Placeholder label="TopUp" icon="plus-circle" />}>
+        <TopUp />
       </React.Suspense>
     </ErrorBoundary>
   );

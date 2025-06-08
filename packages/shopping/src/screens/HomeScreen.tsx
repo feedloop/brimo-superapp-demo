@@ -5,16 +5,24 @@ import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import {Avatar, Button, Text} from 'react-native-paper';
 import {HomeStackParamList} from '../navigation/HomeNavigator';
+import {MainStackParamList} from '../navigation/MainNavigator';
 import {TabsParamList} from '../navigation/TabsNavigator';
 
 type Props = CompositeScreenProps<
   NativeStackScreenProps<HomeStackParamList>,
-  NativeBottomTabScreenProps<TabsParamList, 'HomeNavigator'>
+  CompositeScreenProps<
+    NativeBottomTabScreenProps<TabsParamList, 'HomeNavigator'>,
+    NativeStackScreenProps<MainStackParamList>
+  >
 >;
 
 const HomeScreen = ({navigation}: Props) => {
   const handleShoppingNavigation = () => {
     navigation.navigate('ShoppingPage1');
+  };
+
+  const handleTopUpNavigation = () => {
+    navigation.navigate('TopUp');
   };
 
   return (
@@ -28,6 +36,12 @@ const HomeScreen = ({navigation}: Props) => {
         onPress={handleShoppingNavigation}
         style={styles.button}>
         Shopping Page 1
+      </Button>
+      <Button
+        mode="contained"
+        onPress={handleTopUpNavigation}
+        style={styles.button}>
+        Go to Top Up mini app
       </Button>
     </View>
   );
@@ -47,6 +61,7 @@ const styles = StyleSheet.create({
   },
   button: {
     minWidth: 150,
+    marginBottom: 16,
   },
   avatar: {
     marginBottom: 16,

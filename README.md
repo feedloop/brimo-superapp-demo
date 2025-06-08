@@ -18,27 +18,32 @@ graph TB
     %% Host Application
     Host["🏠 Host App<br/>(packages/host)<br/>Port: Main App"]
 
-    %% Local Mini Apps
-    TopUp["💰 TopUp App<br/>(packages/topup)<br/>Port: 9000"]
-    Shopping["🛒 Shopping App<br/>(packages/shopping)<br/>Port: 9001"]
-    Auth["🔐 Auth App<br/>(packages/auth)<br/>Port: 9003"]
-
-    %% External Mini App
-    Investasi["📈 Investasi App<br/>(External Repository)<br/>Port: 9004"]
+    %% Mini Apps Layer (centered)
+    subgraph MiniApps[" "]
+        TopUp["💰 TopUp App<br/>(packages/topup)<br/>Port: 9000"]
+        Shopping["🛒 Shopping App<br/>(packages/shopping)<br/>Port: 9001"]
+        Auth["🔐 Auth App<br/>(packages/auth)<br/>Port: 9003"]
+        Investasi["📈 Investasi App<br/>(External Repository)<br/>Port: 9004"]
+    end
 
     %% SDK
     SDK["🔧 SDK<br/>(packages/sdk)<br/>Shared Dependencies"]
 
-    %% Dependencies
+    %% Host to Mini Apps Dependencies
     Host --> TopUp
     Host --> Shopping
     Host --> Auth
     Host --> Investasi
 
-    TopUp --> Auth
+    %% Mini Apps to SDK Dependencies
     TopUp --> SDK
     Shopping --> SDK
     Auth --> SDK
+
+    %% Inter Mini App Dependencies
+    TopUp --> Auth
+
+    %% Host to SDK
     Host --> SDK
 
     %% External connection
@@ -49,11 +54,13 @@ graph TB
     classDef miniApp fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
     classDef externalApp fill:#fff3e0,stroke:#e65100,stroke-width:2px,stroke-dasharray: 5 5
     classDef sdk fill:#e8f5e8,stroke:#2e7d32,stroke-width:2px
+    classDef subgraphStyle fill:transparent,stroke:transparent
 
     class Host hostApp
     class TopUp,Shopping,Auth miniApp
     class Investasi externalApp
     class SDK sdk
+    class MiniApps subgraphStyle
 ```
 
 ## Package Structure

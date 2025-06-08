@@ -46,6 +46,7 @@ export default env => {
           './App': './src/navigation/MainNavigator',
         },
         remotes: {
+          topup: `topup@http://localhost:9000/${platform}/mf-manifest.json`,
           auth: `auth@http://localhost:9003/${platform}/mf-manifest.json`,
         },
         shared: getSharedDependencies({eager: true}),
