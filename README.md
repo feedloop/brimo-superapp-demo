@@ -33,9 +33,10 @@ Each mini app in this repository is configured to run on its own port and expose
 
 | App | Port | Location | Purpose |
 |-----|------|----------|---------|
-| **TopUp** | 9000 | `packages/topup` | Mobile recharge and top-up services |
-| **Shopping** | 9001 | `packages/shopping` | E-commerce functionality |
-| **Auth** | 9003 | `packages/auth` | Authentication and user management |
+| **TopUp** | 9000 | `packages/topup` | Topup Mini App |
+| **Shopping** | 9001 | `packages/shopping` | Shoping mini app |
+| **Auth** | 9003 | `packages/auth` | Auth mini app |
+| **Investasi** | 9004 | https://github.com/feedloop/brimo-investasi-mini-app-demo External mini app | Investasi Mini App |
 
 ### External Mini Apps
 
