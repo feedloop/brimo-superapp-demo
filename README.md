@@ -138,12 +138,10 @@ This configuration allows the host app to:
    ```
 
 3. **Start the external Investasi app** (optional):
-   ```bash
-   # Clone the external repository
-   git clone https://github.com/feedloop/brimo-investasi-mini-app-demo
-   cd brimo-investasi-mini-app-demo
 
-   # Start the Investasi app server
+   In the [Investasi app repository](https://github.com/feedloop/brimo-investasi-mini-app-demo):
+
+   ```bash
    pnpm start
    ```
 
