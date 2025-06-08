@@ -56,7 +56,8 @@ export default env => {
       }),
       // silence missing @react-native-masked-view optionally required by @react-navigation/elements
       new rspack.IgnorePlugin({
-        resourceRegExp: /^@react-native-masked-view/,
+        resourceRegExp:
+          /^@react-native-masked-view|^@react-native-vector-icons|^@expo\/vector-icons\/MaterialCommunityIcons$/,
       }),
     ],
   };
