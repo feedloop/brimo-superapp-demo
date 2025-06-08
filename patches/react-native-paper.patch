@@ -1,0 +1,12 @@
+diff --git a/src/components/Card/CardCover.tsx b/src/components/Card/CardCover.tsx
+index 337de2a94402e3e82908e4b00cffcc9cef2bd97b..e0147381dc866a4a4106780c808d89bd7e118e2f 100644
+--- a/src/components/Card/CardCover.tsx
++++ b/src/components/Card/CardCover.tsx
+@@ -86,7 +86,6 @@ const styles = StyleSheet.create({
+     flex: 1,
+     height: undefined,
+     width: undefined,
+-    padding: 16,
+     justifyContent: 'flex-end',
+   },
+ });

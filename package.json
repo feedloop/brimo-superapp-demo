@@ -1,0 +1,51 @@
+{
+  "name": "super-app-showcase",
+  "version": "0.0.1",
+  "license": "MIT",
+  "private": true,
+  "packageManager": "pnpm@9.15.3",
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "scripts": {
+    "run:host:ios": "pnpm --filter host ios",
+    "run:host:android": "pnpm --filter host android",
+    "start": "mprocs -c mprocs/host.yaml",
+    "pods": "pnpm -r pods",
+    "pods:update": "pnpm -r pods:update",
+    "lint": "pnpm -r lint",
+    "test": "pnpm -r test",
+    "typecheck": "pnpm -r typecheck",
+    "align-deps": "pnpm -r align-deps",
+    "check-deps": "pnpm -r check-deps"
+  },
+  "dependencies": {
+    "mprocs": "^0.7.1"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "@react-native/community-cli-plugin": "patches/@react-native__community-cli-plugin.patch",
+      "react-native-paper": "patches/react-native-paper.patch"
+    },
+    "packageExtensions": {
+      "@module-federation/data-prefetch": {
+        "peerDependenciesMeta": {
+          "react-dom": {
+            "optional": true
+          }
+        }
+      },
+      "babel-loader": {
+        "peerDependenciesMeta": {
+          "webpack": {
+            "optional": true
+          }
+        }
+      }
+    },
+    "allowedDeprecatedVersions": {
+      "eslint": "8"
+    }
+  }
+}

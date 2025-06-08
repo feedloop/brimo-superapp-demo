@@ -1,0 +1,13 @@
+procs:
+  Host:
+    shell: pnpm --filter host start
+    stop: SIGKILL
+  Auth:
+    shell: pnpm --filter auth start
+    stop: SIGKILL
+  Top Up:
+    shell: pnpm --filter topup start
+    stop: SIGKILL
+  Shopping:
+    shell: pnpm --filter shopping start
+    stop: SIGKILL

@@ -1,0 +1,13 @@
+procs:
+  Host:
+    shell: pnpm --filter host start --platform android
+    stop: SIGKILL
+  Auth:
+    shell: pnpm --filter auth start --platform android
+    stop: SIGKILL
+  Top Up:
+    shell: pnpm --filter topup start --platform android
+    stop: SIGKILL
+  Shopping:
+    shell: pnpm --filter shopping start --platform android
+    stop: SIGKILL

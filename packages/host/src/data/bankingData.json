@@ -1,0 +1,117 @@
+{
+  "userBalance": {
+    "name": "Aditya",
+    "greeting": "Hai",
+    "mainBalance": 15750000,
+    "accountTitle": "Saldo Rekening Utama",
+    "allAccountsText": "Semua Rekeningmu"
+  },
+  "commonActions": [
+    {
+      "id": "transfer",
+      "name": "Transfer",
+      "icon": "bank-transfer",
+      "color": "#4285F4"
+    },
+    {
+      "id": "briva",
+      "name": "BRIVA",
+      "icon": "credit-card-outline",
+      "color": "#4285F4"
+    },
+    {
+      "id": "ewallet",
+      "name": "E-Wallet",
+      "icon": "wallet-outline",
+      "color": "#4285F4"
+    },
+    {
+      "id": "pulsa",
+      "name": "Pulsa / Data",
+      "icon": "cellphone",
+      "color": "#4285F4"
+    }
+  ],
+  "superAppServices": [
+    {
+      "id": "topup",
+      "name": "Top Up",
+      "icon": "plus-circle",
+      "color": "#4CAF50",
+      "hasNotification": false,
+      "navigateTo": "Topup"
+    },
+    {
+      "id": "shopping",
+      "name": "Shopping",
+      "icon": "shopping",
+      "color": "#E91E63",
+      "hasNotification": false,
+      "navigateTo": "Shopping"
+    },
+    {
+      "id": "investasi",
+      "name": "Investasi",
+      "icon": "trending-up",
+      "color": "#FF9800",
+      "hasNotification": false,
+      "navigateTo": "Investasi"
+    },
+    {
+      "id": "tagihan",
+      "name": "Tagihan",
+      "icon": "receipt",
+      "color": "#2196F3",
+      "hasNotification": false
+    },
+    {
+      "id": "setorTarik",
+      "name": "Setor & Tarik Tunai",
+      "icon": "atm",
+      "color": "#2196F3",
+      "hasNotification": false
+    },
+    {
+      "id": "lifestyle",
+      "name": "QRIS Transfer",
+      "icon": "qrcode-scan",
+      "color": "#2196F3",
+      "hasNotification": false
+    },
+    {
+      "id": "debitvirtual",
+      "name": "Debit Virtual",
+      "icon": "credit-card",
+      "color": "#2196F3",
+      "hasNotification": false
+    },
+    {
+      "id": "catatan",
+      "name": "Catatan Keuangan",
+      "icon": "notebook",
+      "color": "#FF9800",
+      "hasNotification": false
+    },
+    {
+      "id": "investasi",
+      "name": "Investasi",
+      "icon": "trending-up",
+      "color": "#FF9800",
+      "hasNotification": false
+    },
+    {
+      "id": "donasi",
+      "name": "Donasi",
+      "icon": "heart",
+      "color": "#4CAF50",
+      "hasNotification": false
+    },
+    {
+      "id": "konversi",
+      "name": "Konversi Valas",
+      "icon": "currency-usd",
+      "color": "#2196F3",
+      "hasNotification": false
+    }
+  ]
+}
