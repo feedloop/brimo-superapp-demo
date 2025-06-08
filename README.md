@@ -3,7 +3,7 @@
 This repository demonstrates a micro-frontend architecture for React Native using Module Federation with Re.Pack and Rspack. The super app consists of a host application that dynamically loads multiple mini applications.
 
 
-<img src="images/showcase.gif" alt="Showcase Super App" width="100%" />
+<img src="images/showcase.gif" alt="Showcase Super App" width="300px" />
 
 ## Architecture Overview
 
