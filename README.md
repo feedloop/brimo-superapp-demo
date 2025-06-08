@@ -13,55 +13,8 @@ The super app follows a micro-frontend architecture where:
 
 The following diagram shows the relationship between the host app and various mini apps:
 
-```mermaid
-graph TB
-    %% Host Application
-    Host["🏠 Host App<br/>(packages/host)<br/>Port: Main App"]
+<img src="images/high-level.png" alt="High-level App Dependencies Diagram" width="100%" />
 
-    %% Mini Apps Layer (centered)
-    subgraph MiniApps[" "]
-        TopUp["💰 TopUp App<br/>(packages/topup)<br/>Port: 9000"]
-        Shopping["🛒 Shopping App<br/>(packages/shopping)<br/>Port: 9001"]
-        Auth["🔐 Auth App<br/>(packages/auth)<br/>Port: 9003"]
-        Investasi["📈 Investasi App<br/>(External Repository)<br/>Port: 9004"]
-    end
-
-    %% SDK
-    SDK["🔧 SDK<br/>(packages/sdk)<br/>Shared Dependencies"]
-
-    %% Host to Mini Apps Dependencies
-    Host --> TopUp
-    Host --> Shopping
-    Host --> Auth
-    Host --> Investasi
-
-    %% Mini Apps to SDK Dependencies
-    TopUp --> SDK
-    Shopping --> SDK
-    Auth --> SDK
-
-    %% Inter Mini App Dependencies
-    TopUp --> Auth
-
-    %% Host to SDK
-    Host --> SDK
-
-    %% External connection
-    Host -.->|"Remote Loading<br/>via rspack.config.mjs"| Investasi
-
-    %% Styling
-    classDef hostApp fill:#e1f5fe,stroke:#01579b,stroke-width:3px
-    classDef miniApp fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
-    classDef externalApp fill:#fff3e0,stroke:#e65100,stroke-width:2px,stroke-dasharray: 5 5
-    classDef sdk fill:#e8f5e8,stroke:#2e7d32,stroke-width:2px
-    classDef subgraphStyle fill:transparent,stroke:transparent
-
-    class Host hostApp
-    class TopUp,Shopping,Auth miniApp
-    class Investasi externalApp
-    class SDK sdk
-    class MiniApps subgraphStyle
-```
 
 ## Package Structure
 
