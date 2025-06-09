@@ -77,8 +77,6 @@ This configuration allows the host app to:
 ## Technology Stack
 
 - **React Native 0.78.2** - Mobile app framework
-- **Re.Pack 5.1.0** - Webpack alternative for React Native with Module Federation support
-- **Rspack** - Fast bundler compatible with webpack ecosystem
 - **Module Federation** - Micro-frontend architecture implementation
 - **TypeScript** - Type safety and better developer experience
 
