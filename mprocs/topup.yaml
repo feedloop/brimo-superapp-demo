@@ -1,0 +1,4 @@
+procs:
+  Top Up:
+    shell: pnpm --filter topup start
+    stop: SIGKILL

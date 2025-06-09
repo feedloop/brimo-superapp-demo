@@ -12,6 +12,7 @@
     "run:host:ios": "pnpm --filter host ios",
     "run:host:android": "pnpm --filter host android",
     "start": "mprocs -c mprocs/host.yaml",
+    "start:topup": "mprocs -c mprocs/topup.yaml",
     "pods": "pnpm -r pods",
     "pods:update": "pnpm -r pods:update",
     "lint": "pnpm -r lint",
